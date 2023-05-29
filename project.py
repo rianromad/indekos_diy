@@ -1090,7 +1090,7 @@ if selected=='App':
         else:
             df = pd.read_excel(url).set_index(idx_name).head(num)
         return df
-    kost = show_data('.\data\kost_final.xlsx','Kost_id')
+    kost = show_data('data/kost_final.xlsx','Kost_id')
 
 
     #load model
