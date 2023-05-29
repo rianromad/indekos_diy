@@ -101,11 +101,11 @@ div.css-ocqkz7:nth-child(14){
 .block-container > div:nth-child(1) > div:nth-child(1) > div:nth-child(11) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
     background-color: #f7fdf8;
   }
-  div.element-container:nth-child(10) {
+  /*div.element-container:nth-child(10) {
     background-color: #f7fdf8;
     margin-bottom: -5px;
     padding: 10px;
-  }
+  }*/
 
 #kalkulator-harga-sewa-indekos{
     padding: 25px;
@@ -132,4 +132,18 @@ div.css-ocqkz7:nth-child(14){
     margin-right: 30px;
     margin-bottom: 40px;
     padding: 15px;
+}
+#statistik-jumlah-mahasiswa-di-yogyakarta{
+background-color:white;
+}
+#peluang-usaha-indekos{
+background-color:white;
+}
+
+.block-container > div:nth-child(1) > div:nth-child(1) > div:nth-child(18) > div:nth-child(1) {
+  background-color: #f7fdf8;
+}
+
+.block-container > div:nth-child(1) > div:nth-child(1) > div:nth-child(10) > div:nth-child(1){
+    background-color: #f7fdf8;
 }
