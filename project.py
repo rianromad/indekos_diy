@@ -52,9 +52,9 @@ def load_data(url, sheet_name=None):
     df = pd.read_excel(url,sheet_name=sheet_name)
     return df
 
-kost = load_data('.\data\kost_final.xlsx')
-mahasiswa = load_data('.\data\Data mahasiswa jogja.xlsx',sheet_name='Mahasiswa2')
-deskripsi = load_data('.\data\deskripsi data.xlsx')
+kost = load_data('data\kost_final.xlsx')
+mahasiswa = load_data('data\Data mahasiswa jogja.xlsx',sheet_name='Mahasiswa2')
+deskripsi = load_data('data\deskripsi data.xlsx')
 
 if selected=='Home':
     # """ with st.sidebar:
@@ -67,7 +67,7 @@ if selected=='Home':
     st.markdown('### Latar Belakang')
     col1,col2 = st.columns(2)
     with col1:
-        jogja = Image.open(r'.\assets\jogja.jpg')
+        jogja = Image.open(r'assets\jogja.jpg')
         st.image(jogja, caption='Ikon Tugu Yogyakarta')
     with col2:
         st.markdown("""
@@ -136,7 +136,7 @@ if selected=='Home':
 
     st.markdown('\n')
     st.markdown('### Peluang Usaha Indekos')
-    kost = Image.open('./assets/kost.png')
+    kost = Image.open('assets/kost.png')
     st.image(kost, caption='Ilustrasi Mahasiswa Menyewa Indekos')
     st.markdown("""Diketahui pada tahun 2022 jumlah mahasiswa di Yogyakarta **mencapai 401,863**. Angka tersebut terbilang cukup besar dan cenderung mengalami peningkatan apabila dibandingkan dengan tahun-tahun sebelumnya. 
     Hal ini tentunya memberikan peluang bagi masyarakat di Daerah Istimewa Yogyakarta yang tertarik untuk membuka usaha sewa indekos bagi mahasiswa tersebut. 
@@ -182,7 +182,7 @@ if selected=='Dataset':
 
     st.markdown('### Proses Pengambilan Dataset')
     with st.container():
-        alur = Image.open('./assets/alur.png')
+        alur = Image.open('assets/alur.png')
         st.image(alur,caption="Alur Pengerjaan Project")
     st.markdown('\n')
     st.markdown("""Sebanyak **2100 lebih data indekos** dikumpulkan dari sebuah aplikasi penyedia jasa sewa indekos (Mamikos) menggunakan tools **Selenium dan Beautiful Soup** dengan bahasa pemrograman **Python**. 
@@ -192,7 +192,7 @@ if selected=='Dataset':
                     proses analisis.
                    """)
     st.markdown('\n')
-    data_source = Image.open('./assets/data_source.png')
+    data_source = Image.open('assets/data_source.png')
     st.image(data_source, caption="Contoh Data yang Diambil")
     st.markdown('\n')
     st.markdown("""
@@ -200,7 +200,7 @@ if selected=='Dataset':
                 Tahapan selanjutnya yakni menyamakan standar penamaan nilai pada beberapa variabel, misalnya pada variabel **Kecamatan** terdapat nilai berupa **Kecamatan Bantul** dan **Bantul**. Kedua nilai tersebut sama, sehingga perlu disamakan menjadi **Kecamatan Bantul**.
                 Tahapan yang paling penting yaitu mengubah list variabel menjadi sekumpulan variabel yang terpisah. Ilustrasi dari proses tersebut ditunjukkan pada gambar di bawah ini.                 
     """)
-    imputasi = Image.open('./assets/imputation.png')
+    imputasi = Image.open('assets/imputation.png')
     st.image(imputasi, caption='Salah Satu Tahapan Pemrosesan Data')
     st.markdown('\n')
     st.markdown('### Tampilan Dataset')
@@ -214,8 +214,8 @@ if selected=='Dataset':
         else:
             df = pd.read_excel(url).set_index(idx_name).head(num)
         return df
-    kost = show_data('.\data\kost_final.xlsx','Kost_id',10)
-    deskripsi = show_data('.\data\deskripsi data.xlsx','Kolom')
+    kost = show_data('data\kost_final.xlsx','Kost_id',10)
+    deskripsi = show_data('data\deskripsi data.xlsx','Kolom')
     st.dataframe(kost, use_container_width=True)
     with st.expander("Deskripsi Dataset:"):
         st.dataframe(deskripsi,use_container_width=True)
@@ -252,7 +252,7 @@ if selected=='Analysis':
     @st.cache_data()
     def load_stats(val_type,var):
         if val_type=='cat':
-            uji = pd.read_excel(r'.\data\uji_stat.xlsx', sheet_name=val_type)
+            uji = pd.read_excel(r'data\uji_stat.xlsx', sheet_name=val_type)
             select = uji[uji['Variable']==var].values[0]
 
             if select[2] <0.05:
@@ -261,7 +261,7 @@ if selected=='Analysis':
                 info_ = '- Not Significant'
             return select[1],select[2], info_
         else:
-            uji = pd.read_excel(r'.\data\uji_stat.xlsx',sheet_name=val_type)
+            uji = pd.read_excel(r'data\uji_stat.xlsx',sheet_name=val_type)
             select = uji[uji['Variable']==var].values[0]
             if select[2] <0.05:
                 info_ = '+ Significant'
@@ -305,9 +305,9 @@ if selected=='Analysis':
                 for univ,loc in univ_loc.items():
                     folium.Marker(location=loc,popup=univ, icon=folium.Icon(icon_color=univ_palette[univ],color='white', icon='home')).add_to(map)
                 
-                #with open('./legend/univ.txt', 'r') as file:
+                #with open('legend/univ.txt', 'r') as file:
                 #    template = file.read().replace('\n', '')
-                template = (load_text('./legend/univ.txt'))
+                template = (load_text('legend/univ.txt'))
 
                 macro = MacroElement()
                 macro._template = Template(template)
@@ -354,10 +354,10 @@ if selected=='Analysis':
                 for kab,loc in kab_loc.items():
                     folium.Marker(location=loc,popup=kab, icon=folium.Icon(icon_color=kab_palette[kab],color='white', icon='home')).add_to(map)
 
-                #with open('./legend/kab.txt', 'r') as file:
+                #with open('legend/kab.txt', 'r') as file:
                 #    template = file.read().replace('\n', '')
                 
-                template = (load_text('./legend/kab.txt'))
+                template = (load_text('legend/kab.txt'))
                 macro = MacroElement()
                 macro._template = Template(template)
                 map.get_root().add_child(macro)
@@ -419,10 +419,10 @@ if selected=='Analysis':
                 for kec,loc in kec_loc.items():
                     folium.Marker(location=loc,popup=kec, icon=folium.Icon(icon_color=kec_palette[kec],color='white', icon='home')).add_to(map)
 
-                #with open('./legend/kec.txt', 'r') as file:
+                #with open('legend/kec.txt', 'r') as file:
                 #    template = file.read().replace('\n', '')
 
-                template = (load_text('./legend/kec.txt'))
+                template = (load_text('legend/kec.txt'))
 
                 macro = MacroElement()
                 macro._template = Template(template)
@@ -1009,7 +1009,7 @@ if selected=='Analysis':
     st.markdown(""" Setelah melakukan analisis data, selanjutnya dilakukan pemodelan Machine Learning (ML) untuk membuat model prediksi harga sewa. Saya menggunakan metode **Kfold** dengan jumlah **partisi k = 10** untuk memilih model terbaik. Tabel di bawah ini merupakan hasil pemilihan model, di mana model dengan algoritma ***Light Gradient Boosting Machine Regressor (LGBM)*** menghasilkan rata-rata **error (MAPE dan MAE) terendah** serta **koefisien determinasi (R_square dan adjusted R_square) tertinggi**.  
     """)
     st.markdown('\n')
-    performa1 = Image.open('./assets/performa_ml1.png')
+    performa1 = Image.open('assets/performa_ml1.png')
     st.image(performa1, caption='Perbandingan Performa Model (Kfold)')
     st.markdown('\n')
 
@@ -1021,7 +1021,7 @@ if selected=='Analysis':
     Di sisi lain, [koefisien determinasi 82%](https://www.bachelorprint.eu/statistics/coefficient-of-determination/) mengindikasikan bahwa sebanyak 82% variabilitas harga sewa indekos dapat dijelaskan oleh semua variabel independen yang digunakan, sedangkan sisanya dijelaskan oleh faktor atau variabel lainnya. 
     """)
     st.markdown('\n')
-    performa2 = Image.open('./assets/performa_ml2.png')
+    performa2 = Image.open('assets/performa_ml2.png')
     st.image(performa2, caption='Performa Hasil Pelatihan Model Terpilih')
 
     st.markdown('\n')    
@@ -1096,7 +1096,7 @@ if selected=='App':
     #load model
     @st.cache_resource()
     def predict(data):
-        model = pickle.load(open('./data/model.sav', 'rb'))
+        model = pickle.load(open('data/model.sav', 'rb'))
         result = int(model.predict([data])[0])
         return result
 
@@ -1327,7 +1327,7 @@ if selected=='App':
                         st.markdown('\n')
                         dum2, ct_pict, ct_res, dum3 = st.columns([1,30,32,3])
                         with ct_pict:
-                            kost_pict = Image.open('./assets/gambar_kost.png')
+                            kost_pict = Image.open('assets/gambar_kost.png')
                             st.image(kost_pict, width=200)
                         with ct_res:
                             #st.markdown('Berikut adalah saran **harga sewa perbulan** untuk usaha indekos anda:')
@@ -1411,7 +1411,7 @@ if selected=='App':
     with ct_profil:
         col1, col2 = st.columns(2)
         with col1:
-            foto = Image.open('./assets/foto.png')
+            foto = Image.open('assets/foto.png')
             st.image(foto)
 
 
