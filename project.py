@@ -52,9 +52,9 @@ def load_data(url, sheet_name=None):
     df = pd.read_excel(url,sheet_name=sheet_name)
     return df
 
-kost = load_data('data\kost_final.xlsx')
-mahasiswa = load_data('data\Data mahasiswa jogja.xlsx',sheet_name='Mahasiswa2')
-deskripsi = load_data('data\deskripsi data.xlsx')
+kost = load_data('data/kost_final.xlsx')
+mahasiswa = load_data('data/Data mahasiswa jogja.xlsx',sheet_name='Mahasiswa2')
+deskripsi = load_data('data/deskripsi data.xlsx')
 
 if selected=='Home':
     # """ with st.sidebar:
