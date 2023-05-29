@@ -214,8 +214,8 @@ if selected=='Dataset':
         else:
             df = pd.read_excel(url).set_index(idx_name).head(num)
         return df
-    kost = show_data('data\kost_final.xlsx','Kost_id',10)
-    deskripsi = show_data('data\deskripsi data.xlsx','Kolom')
+    kost = show_data('data/kost_final.xlsx','Kost_id',10)
+    deskripsi = show_data('data/deskripsi data.xlsx','Kolom')
     st.dataframe(kost, use_container_width=True)
     with st.expander("Deskripsi Dataset:"):
         st.dataframe(deskripsi,use_container_width=True)
@@ -246,8 +246,8 @@ if selected=='Analysis':
         df = pd.read_excel(url)
         return df
     
-    kost = load_data('.\data\kost_final.xlsx')
-    feature = load_data('.\data\Feature.xlsx') 
+    kost = load_data('data/kost_final.xlsx')
+    feature = load_data('data/Feature.xlsx') 
 
     @st.cache_data()
     def load_stats(val_type,var):
