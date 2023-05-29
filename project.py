@@ -252,7 +252,7 @@ if selected=='Analysis':
     @st.cache_data()
     def load_stats(val_type,var):
         if val_type=='cat':
-            uji = pd.read_excel(r'data\uji_stat.xlsx', sheet_name=val_type)
+            uji = pd.read_excel('data/uji_stat.xlsx', sheet_name=val_type)
             select = uji[uji['Variable']==var].values[0]
 
             if select[2] <0.05:
@@ -261,7 +261,7 @@ if selected=='Analysis':
                 info_ = '- Not Significant'
             return select[1],select[2], info_
         else:
-            uji = pd.read_excel(r'data\uji_stat.xlsx',sheet_name=val_type)
+            uji = pd.read_excel('data/uji_stat.xlsx',sheet_name=val_type)
             select = uji[uji['Variable']==var].values[0]
             if select[2] <0.05:
                 info_ = '+ Significant'
