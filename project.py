@@ -67,7 +67,7 @@ if selected=='Home':
     st.markdown('### Latar Belakang')
     col1,col2 = st.columns(2)
     with col1:
-        jogja = Image.open(r'assets\jogja.jpg')
+        jogja = Image.open(r'assets/jogja.jpg')
         st.image(jogja, caption='Ikon Tugu Yogyakarta')
     with col2:
         st.markdown("""
