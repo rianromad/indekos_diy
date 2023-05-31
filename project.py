@@ -101,6 +101,8 @@ if selected=='Home':
                                             'xanchor': 'center',
                                             'yanchor': 'top'},
                 paper_bgcolor='#f7fdf8', plot_bgcolor='#f7fdf8')
+            fig.layout.xaxis.fixedrange = True
+            fig.layout.yaxis.fixedrange = True
             fig.update_xaxes(title='Tahun')
             fig.update_yaxes(title='Jumlah')
             st.plotly_chart(fig,use_container_width=True)
@@ -125,6 +127,8 @@ if selected=='Home':
                                                 'xanchor': 'center',
                                                 'yanchor': 'top'},
                     paper_bgcolor='#f7fdf8', plot_bgcolor='#f7fdf8', height=550)
+            fig.layout.xaxis.fixedrange = True
+            fig.layout.yaxis.fixedrange = True
             fig.update_xaxes(title='Tahun')
             fig.update_yaxes(title='Persen (%)')
             st.plotly_chart(fig,use_container_width=True)
@@ -333,6 +337,8 @@ if selected=='Analysis':
                                             'yanchor': 'top'},paper_bgcolor='#f7fdf8',plot_bgcolor='#f7fdf8')
                 fig.update_yaxes(title='Universitas Terdekat',ticksuffix = "  ")
                 fig.update_xaxes(title='Jumlah')
+                fig.layout.xaxis.fixedrange = True
+                fig.layout.yaxis.fixedrange = True
                 st.plotly_chart(fig,use_container_width=True)
 
         #peta kabupaten
@@ -382,6 +388,8 @@ if selected=='Analysis':
                                             'yanchor': 'top'},paper_bgcolor='#f7fdf8',plot_bgcolor='#f7fdf8')
                 fig.update_yaxes(title='Kabupaten')
                 fig.update_xaxes(title='Jumlah')
+                fig.layout.xaxis.fixedrange = True
+                fig.layout.yaxis.fixedrange = True
                 st.plotly_chart(fig,use_container_width=True)
 
         #peta kabupaten
@@ -448,6 +456,8 @@ if selected=='Analysis':
                                             'yanchor': 'top'},paper_bgcolor='#f7fdf8',plot_bgcolor='#f7fdf8')
                 fig.update_yaxes(title='Kecamatan')
                 fig.update_xaxes(title='Jumlah')
+                fig.layout.xaxis.fixedrange = True
+                fig.layout.yaxis.fixedrange = True
                 st.plotly_chart(fig,use_container_width=True)
 
         with st.expander('**Penjelasan Visualisasi:**'):
@@ -482,6 +492,8 @@ if selected=='Analysis':
                         'x':0.5,
                             'xanchor': 'center',
                             'yanchor': 'top'},paper_bgcolor='#f7fdf8',plot_bgcolor='#f7fdf8', showlegend=False)
+            fig.layout.xaxis.fixedrange = True
+            fig.layout.yaxis.fixedrange = True
             st.plotly_chart(fig,use_container_width=True)
 
         with st.expander('**Penjelasan Visualisasi:**'):
@@ -499,7 +511,7 @@ if selected=='Analysis':
         if opt_box1 == 'Universitas':
             univ_opt = st.multiselect('Pilihan Universitas:',
                                       kost.sort_values('Universitas Terdekat')['Universitas Terdekat'].unique(),
-                                      ['UNY','UII','ISI'])
+                                      ['UGM','UNY','UII','ISI'])
             
             dum1,col,dum2 = st.columns([1,38,1])
             with col:
@@ -516,7 +528,8 @@ if selected=='Analysis':
                                             'yanchor': 'top'},paper_bgcolor='#f7fdf8',plot_bgcolor='#f7fdf8', showlegend=False)
                 fig.update_xaxes(title='Universitas Terdekat')
                 fig.update_yaxes(title='Harga Sewa (Rp)')
-                
+                fig.layout.xaxis.fixedrange = True
+                fig.layout.yaxis.fixedrange = True
                 st.plotly_chart(fig,use_container_width=True)
 
             dum3,c1,c2,c3,c4,dum4 = st.columns([1,6,1,6,5,1])
@@ -547,6 +560,8 @@ if selected=='Analysis':
                                             'yanchor': 'top'},paper_bgcolor='#f7fdf8',plot_bgcolor='#f7fdf8', showlegend=False)
                 fig.update_xaxes(title='Kabupaten atau Kota')
                 fig.update_yaxes(title='Harga Sewa (Rp)')
+                fig.layout.xaxis.fixedrange = True
+                fig.layout.yaxis.fixedrange = True
                 st.plotly_chart(fig,use_container_width=True)
 
             dum3,c1,c2,c3,c4,dum4 = st.columns([1,6,1,6,5,1])
@@ -577,6 +592,8 @@ if selected=='Analysis':
                                             'yanchor': 'top'},paper_bgcolor='#f7fdf8',plot_bgcolor='#f7fdf8', showlegend=False)
                 fig.update_xaxes(title='Kecamatan')
                 fig.update_yaxes(title='Harga Sewa (Rp)')
+                fig.layout.xaxis.fixedrange = True
+                fig.layout.yaxis.fixedrange = True
                 st.plotly_chart(fig,use_container_width=True)
 
             dum3,c1,c2,c3,c4,dum4 = st.columns([1,6,1,6,5,1])
@@ -637,6 +654,8 @@ if selected=='Analysis':
 
             fig.update_yaxes(title='Harga Sewa (Rp)')    
             fig.update_xaxes(title='Tipe Indekos') 
+            fig.layout.xaxis.fixedrange = True
+            fig.layout.yaxis.fixedrange = True
             st.plotly_chart(fig,use_container_width=True)
 
         dum3,c1,c2,c3,c4,dum4 = st.columns([1,6,1,6,5,1])
@@ -668,6 +687,8 @@ if selected=='Analysis':
                             'xanchor': 'center',
                             'yanchor': 'top'},paper_bgcolor='#f7fdf8',plot_bgcolor='#f7fdf8', showlegend=False)
             fig.update_yaxes(title='Harga Sewa (Rp)')
+            fig.layout.xaxis.fixedrange = True
+            fig.layout.yaxis.fixedrange = True
             st.plotly_chart(fig,use_container_width=True)
 
         dum3,c1,c2,c3,c4,c5,dum4 = st.columns([1,5,1,3,3,3,1])
@@ -712,6 +733,8 @@ if selected=='Analysis':
                                         'xanchor': 'center',
                                         'yanchor': 'top'},paper_bgcolor='#f7fdf8',plot_bgcolor='#f7fdf8', showlegend=False)
             fig.update_yaxes(title='Harga Sewa (Rp)')
+            fig.layout.xaxis.fixedrange = True
+            fig.layout.yaxis.fixedrange = True
             st.plotly_chart(fig,use_container_width=True)
 
         with st.expander('**Penjelasan Visualisasi:**'):
@@ -771,6 +794,8 @@ if selected=='Analysis':
                                         'xanchor': 'center',
                                         'yanchor': 'top'},paper_bgcolor='#f7fdf8',plot_bgcolor='#f7fdf8', showlegend=False)
             fig.update_yaxes(title='Harga Sewa (Rp)')
+            fig.layout.xaxis.fixedrange = True
+            fig.layout.yaxis.fixedrange = True
             st.plotly_chart(fig,use_container_width=True)
 
         with st.expander('**Penjelasan Visualisasi:**'):
@@ -820,6 +845,8 @@ if selected=='Analysis':
                                         'xanchor': 'center',
                                         'yanchor': 'top'},paper_bgcolor='#f7fdf8',plot_bgcolor='#f7fdf8', showlegend=False)
             fig.update_yaxes(title='Harga Sewa (Rp)')
+            fig.layout.xaxis.fixedrange = True
+            fig.layout.yaxis.fixedrange = True
             st.plotly_chart(fig,use_container_width=True)
 
         with st.expander('**Penjelasan Visualisasi:**'):
@@ -885,6 +912,8 @@ if selected=='Analysis':
                                         'xanchor': 'center',
                                         'yanchor': 'top'},paper_bgcolor='#f7fdf8',plot_bgcolor='#f7fdf8', showlegend=False)
             fig.update_yaxes(title='Harga Sewa (Rp)')
+            fig.layout.xaxis.fixedrange = True
+            fig.layout.yaxis.fixedrange = True
             st.plotly_chart(fig,use_container_width=True)
 
         with st.expander('**Penjelasan Visualisasi:**'):
@@ -936,6 +965,8 @@ if selected=='Analysis':
                         'xanchor': 'center',
                         'yanchor': 'top'},paper_bgcolor='#f7fdf8',plot_bgcolor='#f7fdf8', showlegend=False)
                 fig.update_yaxes(title='Harga Sewa (Rp)')
+                fig.layout.xaxis.fixedrange = True
+                fig.layout.yaxis.fixedrange = True
                 st.plotly_chart(fig,use_container_width=True)
         
             else:
@@ -948,6 +979,8 @@ if selected=='Analysis':
                         'xanchor': 'center',
                         'yanchor': 'top'},paper_bgcolor='#f7fdf8',plot_bgcolor='#f7fdf8', showlegend=False)
                 fig.update_yaxes(title='Harga Sewa (Rp)')
+                fig.layout.xaxis.fixedrange = True
+                fig.layout.yaxis.fixedrange = True
                 st.plotly_chart(fig,use_container_width=True)       
 
         with st.expander('**Penjelasan Visualisasi:**'):
@@ -1050,6 +1083,8 @@ if selected=='Analysis':
                                         'yanchor': 'top'},paper_bgcolor='#f7fdf8',plot_bgcolor='#f7fdf8')
             fig.update_yaxes(title='Variable')
             fig.update_xaxes(title='Importance Score')
+            fig.layout.xaxis.fixedrange = True
+            fig.layout.yaxis.fixedrange = True
             st.plotly_chart(fig, use_container_width=True)
     st.markdown('\n')
 
