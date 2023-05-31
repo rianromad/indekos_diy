@@ -1279,7 +1279,9 @@ if selected=='App':
                 dum3, c_app3, c_app4, dum4 = st.columns([1,99,99,1])
                 with c_app3:
                     st.markdown('**Universitas Terdekat:**')
-                    univ_opt_app = st.selectbox('Universitas Terdekat:',kost.sort_values('Universitas Terdekat')['Universitas Terdekat'].unique(),label_visibility='collapsed')
+                    #univ_opt_app = st.selectbox('Universitas Terdekat:',kost.sort_values('Universitas Terdekat')['Universitas Terdekat'].unique(),label_visibility='collapsed')
+                    univ_kab_kec = sorted(list(kost[(kost['Kabupaten']==kab_opt_app) and (kost['Kecamatan']==kec_opt_app)]['Universitas Terdekat'].unique()))
+                    univ_opt_app = st.selectbox('Universitas Terdekat:',univ_kab_kec,label_visibility='collapsed')
                     
                 with c_app4:
                     st.markdown('**Jarak Indekos dengan Universitas (m):**')
