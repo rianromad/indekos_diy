@@ -1280,7 +1280,7 @@ if selected=='App':
                 with c_app3:
                     st.markdown('**Universitas Terdekat:**')
                     #univ_opt_app = st.selectbox('Universitas Terdekat:',kost.sort_values('Universitas Terdekat')['Universitas Terdekat'].unique(),label_visibility='collapsed')
-                    univ_kab_kec = sorted(list(kost[(kost['Kabupaten']==kab_opt_app) and (kost['Kecamatan']==kec_opt_app)]['Universitas Terdekat'].unique()))
+                    univ_kab_kec = sorted(list(kost[(kost['Kabupaten']==kab_opt_app) & (kost['Kecamatan']==kec_opt_app)]['Universitas Terdekat'].unique()))
                     univ_opt_app = st.selectbox('Universitas Terdekat:',univ_kab_kec,label_visibility='collapsed')
                     
                 with c_app4:
