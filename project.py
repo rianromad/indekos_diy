@@ -91,7 +91,7 @@ if selected=='Home':
         st.markdown('\n')
         opt =  st.radio('Opsi Visualisasi:',['Jumlah','Perubahan (%)'], horizontal=True)
         if opt == 'Jumlah' :
-            mahasiswa['Tahun'] = pd.to_datetime(mahasiswa['Tahun'])
+            mahasiswa['Tahun'] = pd.to_datetime(mahasiswa['Tahun'], format='%Y')
             fig = px.line(mahasiswa, x="Tahun",y="Jumlah", markers=True, color_discrete_sequence=['#66cc70'])
             fig.update_layout(
                 title={
