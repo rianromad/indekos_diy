@@ -135,7 +135,7 @@ if selected=='Home':
 
     st.markdown('\n')
     st.markdown("""Dari visualisasi grafik di atas, jumlah mahasiswa di Yogyakarta mengalami peningkatan mulai dari tahun 2020.
-    Hal ini kemungkinan dikarenakan pada tahun 2020, terjadi pandemi Covid-19 yang berdampak pada meningkatnya jumlah **mahasiswa akhir yang belum lulus**. Kita semua juga mengetahui bahwa pada tahun 2021 merupakan **puncak dari pandemi Covid-19** sehingga persentasenya jauh lebih tinggi dibandingkan tahun sebelumnya.
+    Hal ini kemungkinan dipengaruhi oleh pandemi Covid-19 yang terjadi pada tahun 2020 sampai tahun 2022. Kita semua juga mengetahui bahwa pada tahun 2021 merupakan **puncak pandemi Covid-19** sehingga persentasenya jauh lebih tinggi dibandingkan tahun sebelumnya.
     """)
 
     st.markdown('\n')
