@@ -147,3 +147,6 @@ background-color:white;
 .block-container > div:nth-child(1) > div:nth-child(1) > div:nth-child(10) > div:nth-child(1){
     background-color: #f7fdf8;
 }
+
+#root > div:nth-child(1) > div.withScreencast > div > div > div > section > div.block-container.css-1y4p8pa.egzxvld4 > div:nth-child(1) > div > div:nth-child(10) > div > div.css-14j9gcw.e1s6o5jp0{
+background-color:white;}
