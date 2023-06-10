@@ -670,7 +670,7 @@ if selected=='Analysis':
         with st.expander('**Penjelasan Visualisasi:**'):
             st.markdown("""
                     **Indekos campur (putra dan putri)** memiliki sebaran harga sewa yang paling tinggi apabila dibandingkan dengan indekos putra maupun putri. 
-                    Hal ini masuk akal karena indekos campur biasanya disewa oleh pasangan suami istri sebagai alternatif pengganti rumah kontrakan. 
+                    Hal ini masuk akal karena indekos campur biasanya disewa oleh pasangan suami istri atau keluarga. 
                     Sebaran harga sewa indekos putri lebih tinggi daripada putra karena biasanya memiliki fasilitas yang lebih banyak serta ruangan yang lebih rapi.  
             """)            
     st.markdown('\n')    
@@ -985,7 +985,7 @@ if selected=='Analysis':
 
         with st.expander('**Penjelasan Visualisasi:**'):
                 st.markdown("""
-                Berdasarkan hasil uji statistik, terdapat korelasi yang signifikan pada indekos yang dekat dengan UIN, UPN, UMY dan ISI. Pada **UIN (r=-0.39)** dan **UPN (r=-0.25)**, semakin dekat indekos dengan universitas tersebut maka harga sewa cenderung **semakin mahal**, berbeda dengan **UMY (r=0.13)** dan **ISI (r=0.17)** yang cenderung memiliki harga sewa yang semakin murah apabila dekat dengan universitas tersebut. 
+                Berdasarkan hasil uji statistik, terdapat korelasi yang signifikan pada indekos yang dekat dengan UIN, UPN, UMY dan ISI. Terdapat visualisasi yang menarik pada indekos yang dekat dengan **UIN (r=-0.39)** dan **UPN (r=-0.25)**, di mana semakin dekat indekos dengan universitas tersebut maka harga sewa cenderung **semakin mahal**, berbeda dengan **UMY (r=0.13)** dan **ISI (r=0.17)** yang cenderung memiliki harga sewa yang semakin murah apabila dekat dengan universitas tersebut. 
                 """)
                 st.markdown('\n')
                 st.markdown("""
@@ -1039,7 +1039,7 @@ if selected=='Analysis':
     st.markdown('\n') 
     st.markdown('### Pembuatan Model Prediksi Harga Sewa Indekos')
     #lebih bagus kasih struktur tree sama barplot feature importance
-    st.markdown(""" Setelah melakukan analisis data, selanjutnya dilakukan pemodelan Machine Learning (ML) untuk membuat model prediksi harga sewa. Saya menggunakan metode **Kfold** dengan jumlah **partisi k = 10** untuk memilih model terbaik. Tabel di bawah ini merupakan hasil pemilihan model, di mana model dengan algoritma ***Light Gradient Boosting Machine Regressor (LGBM)*** menghasilkan rata-rata **error (MAPE dan MAE) terendah** serta **koefisien determinasi (R_square dan adjusted R_square) tertinggi**.  
+    st.markdown(""" Setelah melakukan analisis data, selanjutnya dilakukan pemodelan Machine Learning (ML) untuk membuat model prediksi harga sewa. Penulis menggunakan metode **Kfold** dengan jumlah **partisi k = 10** untuk memilih model terbaik. Tabel di bawah ini merupakan hasil pemilihan model, di mana model dengan algoritma ***Light Gradient Boosting Machine Regressor (LGBM)*** menghasilkan rata-rata **error (MAPE dan MAE) terendah** serta **koefisien determinasi (R_square dan adjusted R_square) tertinggi**.  
     """)
     st.markdown('\n')
     performa1 = Image.open('assets/performa_ml1.png')
