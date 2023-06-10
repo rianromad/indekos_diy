@@ -201,8 +201,8 @@ if selected=='Dataset':
     st.markdown('\n')
     st.markdown("""
                 Supaya mendapatkan data dengan format yang rapi, dilakukan beberapa tahapan pemrosesan data. Tahapan pertama yang dilakukan adalah menghapus data indekos yang duplikat.
-                Tahapan selanjutnya yakni menyamakan standar penamaan nilai pada beberapa variabel, misalnya pada variabel **Kecamatan** terdapat nilai berupa **Kecamatan Bantul** dan **Bantul**. Kedua nilai tersebut sama, sehingga perlu disamakan menjadi **Kecamatan Bantul**.
-                Tahapan yang paling penting yaitu mengubah list variabel menjadi sekumpulan variabel yang terpisah. Ilustrasi dari proses tersebut ditunjukkan pada gambar di bawah ini.                 
+                Tahapan selanjutnya yakni menyamakan format penulisan dari beberapa variabel, misalnya pada variabel **Kecamatan** terdapat nilai berupa **Kecamatan Bantul** dan **Bantul**. Kedua nilai tersebut sama, sehingga perlu disamakan menjadi **Kecamatan Bantul**.
+                Tahapan yang paling penting yaitu nilai variabel dari list fasilitas sehingga menjadi sekumpulan variabel yang terpisah. Ilustrasi dari proses tersebut ditunjukkan pada gambar di bawah ini.                 
     """)
     imputasi = Image.open('assets/imputation.png')
     st.image(imputasi, caption='Salah Satu Tahapan Pemrosesan Data')
