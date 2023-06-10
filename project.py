@@ -1285,7 +1285,7 @@ if selected=='App':
                     
                 with c_app4:
                     st.markdown('**Jarak Indekos dengan Universitas (m):**')
-                    input_distance = st.number_input('Jarak Indekos dengan Universitas (m):', label_visibility='collapsed')
+                    input_distance = st.number_input('Jarak Indekos dengan Universitas (m):', label_visibility='collapsed', step=100)
                     st.markdown('Gunakan [Gmaps](https://www.google.com/maps) untuk menentukan jarak.')
 
             #st.markdown('\n')
@@ -1295,10 +1295,10 @@ if selected=='App':
                 dum1, c_app5, c_app6, dum2 = st.columns([1,99,99,1])
                 with c_app5:
                     st.markdown('**Panjang Kamar (m):**')
-                    input_p = st.number_input('Panjang Kamar (m):',label_visibility='collapsed')
+                    input_p = st.number_input('Panjang Kamar (m):',label_visibility='collapsed', step=1)
                 with c_app6:
                     st.markdown('**Lebar Kamar (m):**')
-                    input_l = st.number_input('Lebar Kamar (m):',label_visibility='collapsed')
+                    input_l = st.number_input('Lebar Kamar (m):',label_visibility='collapsed', step=1)
                 area_input = input_p * input_l
             
             #fasilitas kamar dan kamar mandi
