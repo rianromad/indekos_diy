@@ -1464,7 +1464,7 @@ if selected=='App':
             with col3:
                 if st.button("Curriculum Vitae"):
                     webbrowser.open_new_tab("https://drive.google.com/drive/folders/1JuoUuTHzxpS1u2D2GI2sPzvhbYXM1jm9?usp=share_link")
-                    #['CV']("https://drive.google.com/drive/folders/1JuoUuTHzxpS1u2D2GI2sPzvhbYXM1jm9?usp=share_link")
+                    
             with col4:
                 if st.button("Profil Linkedin"):
                     webbrowser.open_new_tab("https://www.linkedin.com/in/subkhanrian/")
