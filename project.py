@@ -1462,13 +1462,13 @@ if selected=='App':
         
             col3,col4 = st.columns(2)
             with col3:
-                components.html('''<a href="https://drive.google.com/drive/folders/1JuoUuTHzxpS1u2D2GI2sPzvhbYXM1jm9?usp=share_link" target="_blank">Curriculum Vitae</a>''', height=20)
+                components.html('''<a href="https://drive.google.com/drive/folders/1JuoUuTHzxpS1u2D2GI2sPzvhbYXM1jm9?usp=share_link" target="_blank">Curriculum Vitae</a>''', height=40)
                 #if st.button("Curriculum Vitae"):
                 #    webbrowser.open_new_tab("https://drive.google.com/drive/folders/1JuoUuTHzxpS1u2D2GI2sPzvhbYXM1jm9?usp=share_link")
                    
                     
             with col4:
-                components.html('''<a href="https://www.linkedin.com/in/subkhanrian/" target="_blank">Linkedin</a>''', height=20)
+                components.html('''<a href="https://www.linkedin.com/in/subkhanrian/" target="_blank">Linkedin</a>''', height=40)
                             
                 #if st.button("Profil Linkedin"):
                 #    webbrowser.open_new_tab("https://www.linkedin.com/in/subkhanrian/")
