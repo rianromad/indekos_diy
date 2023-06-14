@@ -1106,11 +1106,12 @@ if selected=='Analysis':
     """)
 
     st.markdown('### Saran')
-    st.markdown("""Bagi pengusaha indekos, penting untuk **mengidentifikasi kelebihan** dari indekos yang di miliki baik dari segi fasilitas maupun lokasi. Outcome dari project ini adalah **aplikasi**
-    yang dapat membantu pengusaha indekos baru atau yang sudah lama untuk mengevaluasi harga sewa bulanan berdasarkan beberapa variabel. Hal ini tentunya akan bermanfaat supaya **harga sewa yang ditentukan tidak terlalu mahal atau murah**. Walaupun begitu, dalam project ini belum ada analisis untuk mengetahui **kriteria 
-    indekos seperti apa yang diminati** oleh mahasiswa atau penyewa indekos, misalnya indekos favorit adalah indekos yang memiliki wifi dan sebagainya. Analisis tersebut tentunya akan sangat bermanfaat bagi pengusaha indekos baru supaya **tidak berlebihan dalam menambahkan fasilitas dengan low impact**. Saran ini bisa menjadi referensi bagi analyst untuk membangun project selanjutnya.     
-
+    st.markdown("""Bagi pengusaha indekos, penting untuk **mengidentifikasi kelebihan** dari indekos yang di miliki baik dari segi fasilitas maupun lokasi. Berikut adalah beberapa poin penting yang perlu dipertimbangkan supaya pengusaha indekos bisa mendapatkan profit lebih banyak. 
+    Output dari project ini adalah aplikasi yang dapat membantu pengusaha indekos baru untuk mengevaluasi harga sewa bulanan berdasarkan beberapa variabel. Hal ini tentunya akan bermanfaat supaya harga sewa yang ditentukan tidak terlalu mahal atau murah.
     """)
+    st.markdown('\n')
+    cuan = Image.open('assets/indekos_cuan.png')
+    st.image(cuan)
 
 if selected=='App':
     #with st.sidebar:
@@ -1325,6 +1326,7 @@ if selected=='App':
                     input_kloset = st.radio('Tipe Kloset: ',['Duduk', 'Jongkok'], horizontal=True)
 
 
+                    
             #fasilitas bersama dan tempat terdekat
             ct_app4 = st.container()
             with ct_app4:
