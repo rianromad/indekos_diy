@@ -154,3 +154,5 @@ background-color:white;}
     background-color: #f7fdf8;}
 #distribusi-harga-sewa-indekos{
     background-color:white;}
+div.element-container:nth-child(13) > div:nth-child(1){
+    background-color: white;}
