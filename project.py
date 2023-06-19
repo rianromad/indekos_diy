@@ -1334,8 +1334,8 @@ if selected=='App':
                 with cpublic:
                     st.markdown('**Fasilitas Bersama:**')
                     public_list = ['Tempat Cuci (public)', 'Jemuran (public)', 'Balcon (public)',
-                                'Wifi (public)', 'Dispenser (public)', 'Rice Cooker (public)',
-                                'Kulkas (public)', 'CCTV (public)', 'Gazebo (public)', 'Joglo (public)',
+                                'Wifi (public)', 'Rice Cooker (public)',
+                                'CCTV (public)', 'Gazebo (public)', 'Joglo (public)',
                                 'Kartu Akses (public)', 'Laundry (public)', 'Locker (public)',
                                 'Meja Umum (public)', 'Mesin Cuci (public)', 'Mushola (public)',
                                 'Pengurus atau Penjaga Kos (public)', 'Parkir Motor (public)',
